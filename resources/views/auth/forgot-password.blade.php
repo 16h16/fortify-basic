@@ -10,7 +10,7 @@
         <p>{{session('status')}}</p>
     @endif
 
-    <form action="{{ route('login') }}" method="POST">
+    <form action="{{ route('password.request') }}" method="POST">
         @csrf
 
         <div>
@@ -21,16 +21,7 @@
         </div>
 
         <div>
-            <input type="password" name="password" placeholder="password">
-            @error('password')
-            <p> {{$message}}</p>
-            @enderror
-        </div>
-
-        <div>
-            <button> Login </button>
+            <button> Reset password </button>
         </div>
     </form>
-
-   <p><a href="{{route('password.request')}}"> Reset password </a></p>
 @endsection
