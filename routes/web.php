@@ -16,6 +16,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/two-factor-recovery', function () {
+    return view('auth.two-factor-recovery');
+})->name('two.factor.recovery');
+
 Route::get('/home', function () {
     //dd(Illuminate\Support\Facades\Auth::user());
     return view('home');
